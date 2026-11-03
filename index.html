@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Как расширение Чекап сайта обрабатывает данные страницы, выполняет запросы и хранит настройки. Checkup privacy policy.">
+<title>Privacy / Конфиденциальность — Чекап сайта</title>
+<style>
+  :root { color-scheme: light dark; font-family: system-ui, sans-serif; line-height: 1.65; }
+  body { max-width: 800px; margin: 0 auto; padding: 32px 24px 64px; }
+  h1 { line-height: 1.2; font-size: clamp(26px, 5vw, 36px); }
+  h2 { margin-top: 32px; font-size: 21px; line-height: 1.3; }
+  a { color: #2457e6; text-underline-offset: 3px; }
+  li + li { margin-top: 8px; } code { overflow-wrap: anywhere; }
+  .date { color: #606875; font-size: 14px; }
+  nav { display: flex; gap: 20px; margin-bottom: 28px; }
+  section + section { border-top: 1px solid #8a93a355; margin-top: 56px; padding-top: 28px; }
+  @media (prefers-color-scheme: dark) { a { color: #9db8ff; } .date { color: #b9c3d9; } }
+</style>
+</head>
+<body>
+<nav aria-label="Язык / Language"><a href="#ru" lang="ru">Русский</a><a href="#en" lang="en">English</a></nav>
+<main>
+<section id="ru" lang="ru">
+<h1>Политика конфиденциальности</h1>
+<p class="date">«Чекап сайта — SEO-проверка страницы» · Обновлено 2 ноября 2026 года</p>
+<p>У расширения нет собственного сервера для приёма отчётов, аналитики и трекеров.
+Адрес и содержимое проверяемой страницы не отправляются разработчику. Данные
+обрабатываются локально для аудита, с сетевыми обращениями, перечисленными ниже.</p>
+<h2>Какие данные обрабатываются</h2>
+<ul>
+  <li>После клика по значку или горячей клавиши временное разрешение
+  <code>activeTab</code> позволяет прочитать адрес и HTML выбранной страницы:
+  текст, метаданные, заголовки, изображения, ссылки, JSON-LD и Microdata,
+  а также доступные метрики загрузки. Текст сайта может содержать персональные
+  данные, если они показаны на проверяемой странице. Другие вкладки не читаются.</li>
+  <li>Расширение временно читает доступную JavaScript строку cookies и имена
+  ключей <code>localStorage</code>/<code>sessionStorage</code> сайта для поиска
+  признаков согласия и cookies аналитики. Строка <code>document.cookie</code>
+  может содержать идентификаторы сеанса. Для выводов используются факт наличия
+  cookies и имена cookies аналитики; значения не используются для входа,
+  не включаются в отчёт и не отправляются разработчику. Cookies
+  <code>HttpOnly</code> и значения хранилища сайта не читаются.</li>
+</ul>
+<h2>Какие сетевые запросы выполняются</h2>
+<ul>
+  <li>При аудите запрашиваются <code>/robots.txt</code>, <code>/sitemap.xml</code>,
+  <code>/llms.txt</code> и сама страница повторно. Дополнительные кнопки проверяют
+  адрес canonical, до 10 адресов hreflang или до 50 внутренних адресов.
+  Запросы используют <code>credentials: omit</code>, без cookies. Начальные
+  адреса проверяются на совпадение origin; редирект может вести на другой
+  адрес, если браузер разрешает переход.</li>
+  <li>Для превью загружаются иконка сайта и <code>og:image</code>, которые могут
+  находиться на стороннем сервере. Сайт или сервер изображений видит ваш
+  IP-адрес и обычные сетевые заголовки браузера. Запросы не проходят через
+  сервер разработчика. Обращения к страницам и ресурсам по HTTP не зашифрованы.</li>
+</ul>
+<h2>Хранение и удаление</h2>
+<p>В localStorage расширения сохраняются выбранный язык интерфейса (RU/EN;
+«Авто» удаляет этот выбор), последний раздел, вкладка превью и
+«Назначение страницы» для последних 300 адресов: origin и путь без параметров
+запроса и фрагмента, плюс ваш выбор. «Не задано» удаляет назначение этого адреса;
+удаление расширения удаляет его локальное хранилище. Снимок страницы и результаты
+запросов временно находятся в памяти выбранной вкладки и окна расширения.
+Новый запуск заменяет текущую проверку; закрытие или перезагрузка выбранной
+вкладки удаляет её данные из памяти. Запросы, уже запущенные пользователем,
+могут завершиться после закрытия попапа. Отчёты не записываются в постоянное хранилище.</p>
+<h2>Передача данных и внешние ссылки</h2>
+<p>Отчёты не отправляются разработчику или сервисам аналитики, не продаются и
+не используются для персонализации рекламы. «Скопировать для задачи» по вашему
+действию помещает текст только в буфер обмена; вы решаете, куда его вставить.
+Бесплатное расширение содержит предложение услуг автора. Ссылки Telegram
+открываются по клику и не содержат адрес проверенной страницы. Там действуют
+правила Telegram; сообщения, которые вы сами отправляете боту или автору,
+не относятся к локальному аудиту расширения.</p>
+<p><strong>Ограниченное использование (Limited Use).</strong> Использование расширением
+информации, полученной через API Google, соответствует
+<a href="https://developer.chrome.com/docs/webstore/program-policies/limited-use" rel="noopener noreferrer">Политике Chrome Web Store в отношении данных пользователей</a>,
+включая требования об ограниченном использовании. Данные используются только для
+показа отчёта по выбранной странице, не передаются третьим лицам, не продаются,
+не применяются для персонализированной рекламы или оценки кредитоспособности,
+а люди не читают их, кроме случаев, когда вы сами отправили их автору.</p>
+<p>Предложение услуг автора можно скрыть кнопкой «×»; выбор хранится локально.</p>
+<h2>Контакты</h2>
+<p>Вопросы о данных: <a href="https://t.me/SashaZaitsau" rel="noopener noreferrer">@SashaZaitsau</a>.
+Обратная связь: <a href="https://t.me/checkup_site_bot" rel="noopener noreferrer">@checkup_site_bot</a>.</p>
+</section>
+<section id="en" lang="en">
+<h1>Privacy policy</h1>
+<p class="date">Checkup — SEO Page Check · Updated November 2, 2026</p>
+<p>Checkup has no server that receives audit reports, analytics or tracking.
+The developer does not receive the checked page URL or content. Data is processed
+locally to audit the selected page, with the network requests described below.</p>
+<h2>Data accessed</h2>
+<ul>
+  <li>After you click the extension icon or use its shortcut, temporary
+  <code>activeTab</code> access allows the extension to read that page's URL, HTML,
+  text, metadata, headings, images, links, JSON-LD and Microdata, and available
+  browser load metrics. Page content may include personal information displayed
+  on the website. Other tabs are not read.</li>
+  <li>The extension temporarily reads the page's JavaScript-accessible cookie
+  string and the names of localStorage/sessionStorage keys to identify consent
+  mechanisms and analytics cookies. The cookie string may contain session
+  identifiers. Only cookie presence and analytics cookie names are used in
+  findings; cookie values are not used to sign in, saved in reports or sent to
+  the developer. HttpOnly cookies and website storage values are not read.</li>
+</ul>
+<h2>Network requests</h2>
+<ul>
+  <li>Each audit requests the site's <code>/robots.txt</code>, <code>/sitemap.xml</code>,
+  <code>/llms.txt</code> and the current page again. Additional buttons check a
+  canonical URL, up to 10 hreflang URLs or up to 50 internal URLs. These requests
+  use <code>credentials: omit</code>, without cookies. Initial URLs are same-origin;
+  redirects may contact another origin if the browser permits it.</li>
+  <li>Previews load the site's favicon and Open Graph image, which may be hosted
+  by a third party. The website or image host sees your IP address and normal
+  browser request headers. Requests do not pass through a developer server.
+  HTTP pages and resources use an unencrypted connection.</li>
+</ul>
+<h2>Storage and deletion</h2>
+<p>The extension's localStorage remembers your interface language (RU/EN;
+selecting “Auto” removes this preference), the last section, preview tab and your
+page-purpose choice for up to 300 URLs. It saves origin and path without query
+parameters or fragments, plus your choice. Select “Not set” to remove an entry;
+uninstalling the extension removes its local storage. Audit snapshots and request
+results stay temporarily in the inspected tab and popup memory. A new run replaces
+the current audit; closing or reloading the inspected tab clears its in-memory
+data. Already started requests may finish after the popup closes. Reports are
+not written to persistent storage.</p>
+<h2>Sharing and external links</h2>
+<p>Reports are not sent to the developer or analytics providers, sold or used for
+personalized advertising. “Copy for a task” writes report text to your clipboard
+only at your request; you control where you paste it. The free extension includes
+an offer of services from its author. Telegram links open only when clicked and
+do not include the checked page URL. Telegram's own policies apply there; messages
+you choose to send to the bot or developer are separate from the local audit.</p>
+<p><strong>Limited Use.</strong> The extension's use of information received from Google
+APIs adheres to the
+<a href="https://developer.chrome.com/docs/webstore/program-policies/limited-use" rel="noopener noreferrer">Chrome Web Store User Data Policy</a>,
+including the Limited Use requirements. Data is used only to show the report for
+the selected page, is not transferred to third parties, sold, used for personalized
+advertising or credit assessment, and is not read by humans unless you send it to
+the author yourself.</p>
+<p>The author's offer can be hidden with the “×” button; this choice is stored locally.</p>
+<h2>Contact</h2>
+<p>Privacy questions: <a href="https://t.me/SashaZaitsau" rel="noopener noreferrer">@SashaZaitsau</a>.
+Feedback: <a href="https://t.me/checkup_site_bot" rel="noopener noreferrer">@checkup_site_bot</a>.</p>
+</section>
+</main>
+</body>
+</html>
