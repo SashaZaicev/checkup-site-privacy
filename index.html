@@ -76,7 +76,12 @@
 номер и контрольную сумму абзаца, позицию анкора и короткий текст вокруг него.
 Проверка читает ссылки в открытой вкладке. Эти данные остаются в профиле Chrome
 и не передаются на сервер. Правила и сохранённые предложения можно удалить в
-разделе «Ссылки и языки».</p>
+разделе «Ссылки и языки». Если вы добавите страницу в очередь статей,
+расширение сохранит её адрес с параметрами запроса без фрагмента, заголовок
+и выбранный статус. Если вы зададите тип контента, он сохранится в записи.
+Журнал хранит время, предыдущий и новый статус. Очередь хранится в том же
+локальном хранилище отдельно для каждого сайта. При удалении записи удаляется
+и её журнал.</p>
 <h2>Передача данных и внешние ссылки</h2>
 <p>Отчёты не отправляются разработчику или сервисам аналитики, не продаются и
 не используются для персонализации рекламы. «Скопировать для задачи» по вашему
@@ -150,7 +155,12 @@ and without its fragment, anchor, target URL, section heading, paragraph
 number and fingerprint, anchor position, and a short text excerpt. Verification
 reads links in the open tab. These records stay in your Chrome profile and
 are not sent to a server. You can delete rules and saved suggestions in the
-links and languages section.</p>
+links and languages section. If you add a page to the article queue, the
+extension saves its URL with its query and without its fragment, title, and
+selected status. If you set a content type, it is also saved. The history
+records the time, previous status, and new status for each change. The queue
+uses the same local storage and is separate for each site. Removing an entry
+also removes its history.</p>
 <h2>Sharing and external links</h2>
 <p>Reports are not sent to the developer or analytics providers, sold or used for
 personalized advertising. “Copy for a task” writes report text to your clipboard
