@@ -19,7 +19,7 @@
 </style>
 </head>
 <body>
-<nav aria-label="Язык / Language"><a href="#ru" lang="ru">Русский</a><a href="#en" lang="en">English</a></nav>
+<nav aria-label="Язык / Language / 语言"><a href="#ru" lang="ru">Русский</a><a href="#en" lang="en">English</a><a href="#zh-CN" lang="zh-CN">简体中文</a></nav>
 <main>
 <section id="ru" lang="ru">
 <h1>Политика конфиденциальности</h1>
@@ -49,6 +49,9 @@
   и повторно запрашивает страницу, если фильтр адресов разрешает запрос. Дополнительные кнопки проверяют
   адрес canonical, до 4 вариантов адреса страницы, до 10 адресов hreflang, до 50
   внутренних адресов или до 10 файлов sitemap своего сайта.
+  Во вкладке «Аудит сайта» можно отдельно запросить HTML до 10 выбранных внутренних
+  адресов из ссылок открытой страницы и вручную выбрать ещё до 10 адресов из уже
+  проверенных страниц. Эти запросы выполняются без перехода по редиректам.
   Проверка каталога ARD по кнопке запрашивает два адреса <code>/.well-known/</code>
   на том же сайте без перехода по редиректам.
   Запросы используют <code>credentials: omit</code>, без cookies. Начальные
@@ -60,7 +63,7 @@
   сервер разработчика. Обращения к страницам и ресурсам по HTTP не зашифрованы.</li>
 </ul>
 <h2>Хранение и удаление</h2>
-<p>В localStorage расширения сохраняются выбранный язык интерфейса (RU/EN;
+<p>В localStorage расширения сохраняются выбранный язык интерфейса (RU/EN/简体中文/ES/DE/日本語/FR/pt-BR;
 «Авто» удаляет этот выбор), последний раздел, вкладка превью и
 «Назначение страницы» для последних 300 адресов: origin и путь без параметров
 запроса и фрагмента, плюс ваш выбор. «Не задано» удаляет назначение этого адреса;
@@ -129,7 +132,10 @@ locally to audit the selected page, with the network requests described below.</
   <li>The popup reads the open tab on launch. The “Check site response” button requests the site's
   <code>/robots.txt</code>, <code>/sitemap.xml</code>, and <code>/llms.txt</code>. It also requests the current page again if the URL passes the request filter. Additional buttons check a
   canonical URL, up to 4 variants of the page URL, up to 10 hreflang URLs, up to
-  50 internal URLs or up to 10 sitemap files of the same site. The ARD check
+  50 internal URLs or up to 10 sitemap files of the same site. The Site Audit tab can
+  separately request HTML from up to 10 selected internal links on the open page
+  and up to 10 more links manually selected from checked pages. These requests do not
+  follow redirects. The ARD check
   requests two <code>/.well-known/</code> URLs on the same site without following redirects. These requests
   use <code>credentials: omit</code>, without cookies. Initial URLs are same-origin;
   redirects may contact another origin if the browser permits it.</li>
@@ -139,7 +145,7 @@ locally to audit the selected page, with the network requests described below.</
   HTTP pages and resources use an unencrypted connection.</li>
 </ul>
 <h2>Storage and deletion</h2>
-<p>The extension's localStorage remembers your interface language (RU/EN;
+<p>The extension's localStorage remembers your interface language (RU/EN/简体中文/ES/DE/日本語/FR/pt-BR;
 selecting “Auto” removes this preference), the last section, preview tab and your
 page-purpose choice for up to 300 URLs. It saves origin and path without query
 parameters or fragments, plus your choice. Select “Not set” to remove an entry;
@@ -181,6 +187,26 @@ the author yourself.</p>
 <h2>Contact</h2>
 <p>Privacy questions: <a href="https://t.me/SashaZaitsau" rel="noopener noreferrer">@SashaZaitsau</a>.
 Feedback: <a href="https://t.me/SashaZaitsau" rel="noopener noreferrer">@SashaZaitsau</a>.</p>
+</section>
+<section id="zh-CN" lang="zh-CN">
+<h1>隐私政策</h1>
+<p class="date">Checkup 网页 SEO 检查 · 2026 年 11 月 24 日</p>
+<p>扩展在本地检查所选网页。开发者不接收报告、网页网址或内容，也不运营用于收集报告、跟踪或分析的服务器。</p>
+<h2>读取的数据</h2>
+<p>点击扩展图标或使用快捷键后，扩展通过临时权限 <code>activeTab</code> 读取当前网页的网址、HTML、文字、元数据、标题、图片、链接、JSON-LD、微数据和可用的加载指标。网页可能包含个人信息。扩展仅检查您选择的标签页。</p>
+<p>为识别同意机制与分析 Cookie，扩展临时读取 JavaScript 可见的 Cookie 字符串及 localStorage、sessionStorage 的键名。Cookie 字符串可能包含会话标识符。检查仅使用 Cookie 是否存在及分析 Cookie 的名称。扩展不会使用它们登录，不会在报告中保存 Cookie 值或将其发送给开发者，也不会读取 HttpOnly Cookie 或网站存储中的值。</p>
+<h2>网络请求</h2>
+<p>打开扩展时读取当前标签页。点击“检查网站响应”会请求本站的 /robots.txt、/sitemap.xml 和 /llms.txt，并在当前网址通过过滤器时再次请求该网页。附加按钮可检查规范网址、最多 4 种网址变体、10 个 hreflang 网址、50 个站内网址或同站最多 10 个站点地图文件。网站审计可分别请求两批手动选择的站内网页，每批最多 10 页，不跟随重定向。ARD 检查请求本站两个 /.well-known/ 网址，也不跟随重定向。</p>
+<p>上述请求使用 <code>credentials: omit</code>，不带 Cookie。起始网址与当前站点同源；允许重定向的检查可能由浏览器转向其他来源。点击“加载预览图片”会请求网站图标和 Open Graph 图片，图片也可能来自第三方主机。网站或图片主机可看到您的 IP 地址及常规请求标头。请求不经过开发者的服务器。HTTP 连接未经加密。</p>
+<h2>存储与删除</h2>
+<p>扩展在本地记住界面语言、上次打开的分类、预览平台及最多 300 个网址的页面用途。仅保存来源、路径和用户选择，不含查询参数或片段。选择“自动”清除语言偏好，选择“未设置”删除对应网址的用途记录。卸载扩展会删除其本地存储。</p>
+<p>审计快照和请求结果临时保存在标签页及扩展窗口的内存中。新检查会替换现有快照，关闭或刷新被检查标签页会清除其中的数据。关闭扩展窗口后，已发出的请求仍可能完成。扩展不会自动将报告写入持久存储。</p>
+<p>点击“为本站保存规则”后，扩展会按网站来源在自己的 <code>localStorage</code> 中保存站内链接规则（短语和目标网址）。点击“保存以便验证”会保存源网址（含查询参数，不含片段）、锚文本、目标网址、标题、段落编号与指纹、锚文本位置和简短的上下文。验证在当前标签页读取链接。这些记录留在您的 Chrome 配置文件中，不会发送至服务器。您可在链接和语言分类中删除规则和已保存的建议。</p>
+<p>将页面添加到文章队列后，扩展会保存其网址（含查询参数，不含片段）、标题和所选状态。您也可以设置并保存内容类型。状态记录包含变更时间、原状态和新状态。每个网站的队列分别保存在同一扩展本地存储中。移除队列条目时也会删除其状态记录。</p>
+<h2>分享与外部链接</h2>
+<p>仅在您操作时，扩展才会复制任务或提示词到剪贴板，或将报告及 Markdown 文件下载到设备。您决定是否分享。报告不会发送给开发者或分析服务，也不会被出售或用于个性化广告。作者的服务推广可通过“×”隐藏，此选择保存在本地。仅在点击时打开 Telegram 链接，链接不含被检查的网址；自行发送的消息受 Telegram 政策约束。</p>
+<p>扩展使用 Google API 信息时遵守<a href="https://developer.chrome.com/docs/webstore/program-policies/limited-use" rel="noopener noreferrer">Chrome 网上应用店用户数据政策</a>及其有限使用要求。数据仅用于展示所选网页的报告，不会转交第三方、出售或用于个性化广告及信用评估。除非您主动将报告提供给作者，否则不会由人工阅读。</p>
+<h2>联系方式</h2><p>隐私问题请通过 Telegram 联系 <a href="https://t.me/SashaZaitsau" rel="noopener noreferrer">@SashaZaitsau</a>。</p>
 </section>
 </main>
 </body>
