@@ -23,7 +23,7 @@
 <main>
 <section id="ru" lang="ru">
 <h1>Политика конфиденциальности</h1>
-<p class="date">«Чекап сайта — SEO-проверка страницы» · Обновлено 16 ноября 2026 года</p>
+<p class="date">«Чекап сайта — SEO-проверка страницы» · Обновлено 24 ноября 2026 года</p>
 <p>У расширения нет собственного сервера для приёма отчётов, аналитики и трекеров.
 Адрес и содержимое проверяемой страницы не отправляются разработчику. Данные
 обрабатываются локально для аудита, с сетевыми обращениями, перечисленными ниже.</p>
@@ -69,6 +69,14 @@
 Новый запуск заменяет текущую проверку; закрытие или перезагрузка выбранной
 вкладки удаляет её данные из памяти. Запросы, уже запущенные пользователем,
 могут завершиться после закрытия попапа. Отчёты не записываются в постоянное хранилище.</p>
+<p>По вашему действию «Сохранить для сайта» расширение записывает в свой
+<code>localStorage</code> правила перелинковки (фразы и целевые URL) отдельно
+для каждого источника сайта. «Сохранить для проверки» сохраняет адрес исходной
+страницы с параметрами запроса без фрагмента, анкор, целевой URL, заголовок,
+номер и контрольную сумму абзаца, позицию анкора и короткий текст вокруг него.
+Проверка читает ссылки в открытой вкладке. Эти данные остаются в профиле Chrome
+и не передаются на сервер. Правила и сохранённые предложения можно удалить в
+разделе «Ссылки и языки».</p>
 <h2>Передача данных и внешние ссылки</h2>
 <p>Отчёты не отправляются разработчику или сервисам аналитики, не продаются и
 не используются для персонализации рекламы. «Скопировать для задачи» по вашему
@@ -93,7 +101,7 @@
 </section>
 <section id="en" lang="en">
 <h1>Privacy policy</h1>
-<p class="date">Checkup — SEO Page Check · Updated November 16, 2026</p>
+<p class="date">Checkup — SEO Page Check · Updated November 24, 2026</p>
 <p>Checkup has no server that receives audit reports, analytics or tracking.
 The developer does not receive the checked page URL or content. Data is processed
 locally to audit the selected page, with the network requests described below.</p>
@@ -135,6 +143,14 @@ results stay temporarily in the inspected tab and popup memory. A new run replac
 the current audit; closing or reloading the inspected tab clears its in-memory
 data. Already started requests may finish after the popup closes. Reports are
 not written to persistent storage.</p>
+<p>When you select “Save for this site”, the extension stores internal link
+rules (phrases and target URLs) in its own <code>localStorage</code> for that
+site origin. “Save for verification” stores the source URL with its query
+and without its fragment, anchor, target URL, section heading, paragraph
+number and fingerprint, anchor position, and a short text excerpt. Verification
+reads links in the open tab. These records stay in your Chrome profile and
+are not sent to a server. You can delete rules and saved suggestions in the
+links and languages section.</p>
 <h2>Sharing and external links</h2>
 <p>Reports are not sent to the developer or analytics providers, sold or used for
 personalized advertising. “Copy for a task” writes report text to your clipboard
