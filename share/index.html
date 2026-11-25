@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Checkup — SEO-проверка страницы в Chrome</title>
+  <meta name="description" content="Проверьте заголовки, ссылки и настройки индексации открытой страницы. Checkup покажет, что стоит исправить.">
+  <link rel="canonical" href="https://sashazaicev.github.io/checkup-site-privacy/share/">
+  <link rel="icon" type="image/svg+xml" href="./checkup.svg">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ru_RU">
+  <meta property="og:site_name" content="Checkup">
+  <meta property="og:url" content="https://sashazaicev.github.io/checkup-site-privacy/share/">
+  <meta property="og:title" content="Checkup — SEO-проверка страницы в Chrome">
+  <meta property="og:description" content="Проверьте заголовки, ссылки и настройки индексации открытой страницы. Checkup покажет, что стоит исправить.">
+  <meta property="og:image" content="https://sashazaicev.github.io/checkup-site-privacy/share/checkup-cover-v1.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Логотип Checkup и надпись «SEO-проверка страницы» на синем фоне.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://sashazaicev.github.io/checkup-site-privacy/share/checkup-cover-v1.png">
+  <style>
+    :root { color-scheme: light; font-family: "Segoe UI", system-ui, sans-serif; color: #101c38; background: #f4f6fa; }
+    * { box-sizing: border-box; }
+    body { margin: 0; }
+    main { width: min(100% - 32px, 720px); margin: clamp(20px, 6vh, 72px) auto 28px; }
+    article { overflow: hidden; border-radius: 24px; background: #fff; box-shadow: 0 16px 60px #20335514; }
+    .cover { position: relative; isolation: isolate; container-type: inline-size; aspect-ratio: 1200 / 630; overflow: hidden; background: radial-gradient(ellipse at 52% 6%, #244da8 0%, #142d67 47%, #0a183b 100%); color: white; }
+    .brand { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+    .brand img { width: 17cqw; display: block; filter: drop-shadow(0 .6cqw 1.6cqw #06163266); }
+    .brand strong { font-size: 8.2cqw; letter-spacing: -.05em; line-height: 1.13; }
+    .brand span { margin-top: 1.3cqw; font-size: 2.85cqw; font-weight: 500; color: #d1e3ff; }
+    .sheet { position: absolute; z-index: -1; width: 30cqw; height: 35cqw; border: .18cqw solid #719aff60; border-radius: 2cqw; background: linear-gradient(145deg, #315ebd88, #15347555); transform: rotate(-16deg); }
+    .sheet::before, .sheet::after { content: ""; position: absolute; left: 3cqw; top: 5cqw; width: 55%; height: .9cqw; border-radius: 1cqw; background: #719aff64; }
+    .sheet::after { top: 9cqw; width: 77%; height: .55cqw; box-shadow: 0 2.3cqw #719aff40, 0 4.6cqw #719aff40, 0 6.9cqw #719aff40; }
+    .sheet.left { left: -14cqw; bottom: -10cqw; }
+    .sheet.right { right: -11cqw; top: -9cqw; transform: rotate(18deg); }
+    .details { padding: clamp(24px, 6vw, 48px); }
+    h1 { margin: 0; font-size: clamp(28px, 5.2vw, 42px); letter-spacing: -.035em; line-height: 1.12; text-wrap: balance; }
+    p { max-width: 53ch; margin: 16px 0 24px; color: #41516b; font-size: 17px; line-height: 1.55; }
+    .install { display: inline-flex; align-items: center; justify-content: center; gap: 10px; padding: 14px 20px; border-radius: 10px; text-decoration: none; font-weight: 650; line-height: 1.35; color: white; background: #234fd7; }
+    .install:hover { background: #153ba9; }
+    a:focus-visible { outline: 3px solid #122a68; outline-offset: 4px; }
+    footer { margin: 18px 6px; font-size: 14px; }
+    footer a { color: #455673; text-underline-offset: 3px; }
+    @media (max-width: 480px) {
+      .install { width: 100%; }
+      article { border-radius: 16px; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <article>
+      <div class="cover" role="img" aria-label="Checkup — SEO-проверка страницы">
+        <div class="sheet left"></div>
+        <div class="sheet right"></div>
+        <div class="brand"><img src="./checkup.svg" alt=""><strong>Checkup</strong><span>SEO-проверка страницы</span></div>
+      </div>
+      <div class="details">
+        <h1>Проверьте SEO открытой страницы</h1>
+        <p>Checkup покажет, какие заголовки, ссылки и настройки индексации стоит исправить. Результаты можно скачать и передать разработчику.</p>
+        <a class="install" href="https://chromewebstore.google.com/detail/checkup-%E2%80%94-seo-page-check/ccbjifkjndoceimingbdhloekbhfcgfe?hl=ru">Установить из Chrome Web Store <span aria-hidden="true">↗</span></a>
+      </div>
+    </article>
+    <footer><a href="../">Политика конфиденциальности</a></footer>
+  </main>
+</body>
+</html>
